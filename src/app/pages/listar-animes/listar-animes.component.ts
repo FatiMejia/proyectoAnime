@@ -23,6 +23,7 @@ export class ListarAnimesComponent implements OnInit {
       this.Animes = data;
     })
   }
+  
 
   //método para borrar en animes 
   eliminarAnime(anime, index){

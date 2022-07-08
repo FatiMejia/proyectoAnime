@@ -40,7 +40,7 @@ export class EditarAnimeComponent implements OnInit {
       genero:['',[Validators.required]],
       temporada: ['',[Validators.required]],
       autor:['',[Validators.required]],
-      sipnosis: ['',[Validators.required]],
+      sinopsis: ['',[Validators.required]],
       imagen:['',[Validators.required]],
     });
     
@@ -53,7 +53,7 @@ export class EditarAnimeComponent implements OnInit {
       genero:['',[Validators.required]],
       temporada: ['',[Validators.required]],
       autor:['',[Validators.required]],
-      sipnosis: ['',[Validators.required]],
+      sinopsis: ['',[Validators.required]],
       imagen:['',[Validators.required]],
     });
 
@@ -85,7 +85,7 @@ export class EditarAnimeComponent implements OnInit {
         genero: data['genero'],
         temporada: data['temporada'],
         autor: data['autor'],
-        sipnosis: data['sipnosis'],
+        sinopsis: data['sinopsis'],
         imagen: data['imagen'],
       });
     });

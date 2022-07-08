@@ -3,7 +3,7 @@
 
     <!--mensaje por si no hay empleados registrados-->
     <p *ngIf="Animes.length <= 0" class="text-center">No hay animes registrados</p>
-    
+
     <table class="table table-bordered " *ngIf="Animes.length > 0">
         <thead class=" table-danger">
             <tr>
@@ -12,7 +12,7 @@
                 <th scope="col">Genero</th>
                 <th scope="col">Temporada</th>
                 <th scope="col">Autor</th>
-                <th scope="col">Sipnosis</th>
+                <th scope="col">Sinopsis</th>
                 <th scope="col">Imagen</th>
                 <th scope="col center">Editar</th>
                 <th scope="col center">Eliminar</th>
@@ -25,7 +25,7 @@
                 <td>{{ anime.genero }}</td>
                 <td>{{ anime.temporada }}</td>
                 <td>{{ anime.autor }}</td>
-                <td>{{ anime.sipnosis }}</td>
+                <td>{{ anime.sinopsis }}</td>
                 <td>{{ anime.imagen }}</td>
                 <td>
                     <span [routerLink]="['/editar-anime/', anime._id]">

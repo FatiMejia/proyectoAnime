@@ -39,7 +39,7 @@ export class CrearAnimesComponent implements OnInit {
       genero:['',[Validators.required]],
       temporada: ['',[Validators.required]],
       autor:['',[Validators.required]],
-      sipnosis: ['',[Validators.required]],
+      sinopsis: ['',[Validators.required]],
       imagen:['',[Validators.required]],
     });
   }

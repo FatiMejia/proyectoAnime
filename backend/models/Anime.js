@@ -1,27 +1,27 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-let Anime = new Schema ({
+let Anime = new Schema({
     nombre: {
         type: String
     },
-    genero:{
+    genero: {
         type: String
     },
-    temporada:{
+    temporada: {
         type: String
     },
-    autor:{
+    autor: {
         type: String
     },
-    sinopsis:{
-        type : String
+    sinopsis: {
+        type: String
     },
-    imagen:{
+    imagen: {
         type: String
     }
-},{
-    collection: 'animeProyecto'
+}, {
+    collection: 'anime'
 })
 
-module.exports = mongoose.model('Anime', Anime)
+module.exports = mongoose.model('Animes', Anime)

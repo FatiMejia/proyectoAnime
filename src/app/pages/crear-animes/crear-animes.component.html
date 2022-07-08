@@ -6,14 +6,13 @@
         <div class="card-body">
 
             <form [formGroup]="animeForm" (ngSubmit)="onSubmit()">
-                
+
                 <!-- Nombre -->
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" class="form-control"  formControlName="nombre"/>
+                    <input type="text" class="form-control" formControlName="nombre" />
                     <!-- error de validación-->
-                    <div style="color: red;"
-                        *ngIf="enviado && myForm['nombre'].errors?.['required']">
+                    <div style="color: red;" *ngIf="enviado && myForm['nombre'].errors?.['required']">
                         El nombre es obligatorio
                     </div>
                 </div>
@@ -21,60 +20,52 @@
                 <!-- Genero -->
                 <div class="form-group">
                     <label for="genero">Genero:</label>
-                    <select class="custom-select form-control"
-                    (change)="actualizarGenero($event.target.value)"
-                    formControlName="genero">
+                    <select class="custom-select form-control" (change)="actualizarGenero($event.target.value)" formControlName="genero">
 
                     <option value="">Seleccina el genero...</option>
                     <option *ngFor="let genero of animeGeneros"
                     value="{{ genero }}">{{ genero }} </option>
                 </select>
-                <!-- error de validación-->
-                <div style="color: red;"
-                *ngIf="enviado && myForm['genero'].errors?.['required']">
-                Debes seleccionar un genero
-            </div>
+                    <!-- error de validación-->
+                    <div style="color: red;" *ngIf="enviado && myForm['genero'].errors?.['required']">
+                        Debes seleccionar un genero
+                    </div>
                 </div>
 
                 <!-- Temporada -->
                 <div class="form-group">
                     <label for="temporada">Temporada:</label>
-                    <select class="custom-select form-control"
-                    (change)="actualizarTemporada($event.target.value)"
-                    formControlName="temporada">
+                    <select class="custom-select form-control" (change)="actualizarTemporada($event.target.value)" formControlName="temporada">
 
                     <option value="">Seleccina la temporada...</option>
                     <option *ngFor="let temporada of animeTemporadas"
                     value="{{ temporada }}">{{ temporada }} </option>
                 </select>
-                <!-- error de validación-->
-                <div style="color: red;"
-                *ngIf="enviado && myForm['temporada'].errors?.['required']">
-                Debes seleccionar una temporada
-            </div>
+                    <!-- error de validación-->
+                    <div style="color: red;" *ngIf="enviado && myForm['temporada'].errors?.['required']">
+                        Debes seleccionar una temporada
+                    </div>
                 </div>
 
 
                 <!-- Autor -->
                 <div class="form-group">
                     <label for="autor">Autor:</label>
-                    <input type="text" class="form-control"  formControlName="autor"/>
+                    <input type="text" class="form-control" formControlName="autor" />
                     <!-- error de validación-->
-                    <div style="color: red;"
-                        *ngIf="enviado && myForm['autor'].errors?.['required']">
+                    <div style="color: red;" *ngIf="enviado && myForm['autor'].errors?.['required']">
                         El autor es obligatorio
                     </div>
                 </div>
 
 
-                <!-- Sipnosis -->
+                <!-- sinopsis -->
                 <div class="form-group">
-                    <label for="sipnosis">Sipnosis:</label>
-                    <input type="text" class="form-control"  formControlName="sipnosis"/>
+                    <label for="sinopsis">Sinopsis:</label>
+                    <input type="text" class="form-control" formControlName="sinopsis" />
                     <!-- error de validación-->
-                    <div style="color: red;"
-                        *ngIf="enviado && myForm['sipnosis'].errors?.['required']">
-                        La sipnosis es obligatorio
+                    <div style="color: red;" *ngIf="enviado && myForm['sinopsis'].errors?.['required']">
+                        La sinopsis es obligatorio
                     </div>
                 </div>
 
@@ -82,10 +73,9 @@
                 <!-- Imagen -->
                 <div class="form-group">
                     <label for="imagen">Imagen:</label>
-                    <input type="text" class="form-control"  formControlName="imagen"/>
+                    <input type="text" class="form-control" formControlName="imagen" />
                     <!-- error de validación-->
-                    <div style="color: red;"
-                        *ngIf="enviado && myForm['imagen'].errors?.['required']">
+                    <div style="color: red;" *ngIf="enviado && myForm['imagen'].errors?.['required']">
                         La imagen es obligatorio
                     </div>
                 </div>

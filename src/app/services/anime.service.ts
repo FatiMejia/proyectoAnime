@@ -20,7 +20,8 @@ export class AnimeService {
 
   //método que obtiene a todos los animes
   getAnimes(){
-    return this.http.get(`${this.baseUrl}`)
+    let url= `${this.baseUrl}/anime`;
+    return this.http.get(url);
   }
 
   //método para obtener un solo anime por su id
